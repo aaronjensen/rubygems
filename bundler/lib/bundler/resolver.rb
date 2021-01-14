@@ -165,10 +165,7 @@ module Bundler
           sg_ruby = sg.copy_for([Gem::Platform::RUBY])
           next unless sg_ruby
 
-          sg_ruby_deps = sg_ruby.dependencies_for_activated_platforms.map(&:dep)
-          sg_all_platforms_deps = sg_all_platforms.dependencies_for_activated_platforms.map(&:dep)
-
-          selected_sgs.insert(-2, sg_ruby) if sg_ruby_deps != sg_all_platforms_deps
+          selected_sgs.insert(-2, sg_ruby)
         end
         selected_sgs
       end

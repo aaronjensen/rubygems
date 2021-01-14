@@ -17,7 +17,9 @@ module Bundler
 
     private_class_method :new
 
-    alias_method :eql?, :==
+    def ==(other)
+      other.is_a?(DepProxy) && dep == other.dep
+    end
 
     def type
       @dep.type
