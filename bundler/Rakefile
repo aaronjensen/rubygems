@@ -148,7 +148,7 @@ namespace :man do
   end
 end
 
-load "task/automatiek.rake"
+load "../util/automatiek.rake"
 
 # We currently ship Molinillo 0.7.0 with patches to:
 # * Make use of `Array#-` instead of `Array#&` on hot resolution code paths because it performs a lot better.
