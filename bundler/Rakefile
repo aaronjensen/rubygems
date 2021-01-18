@@ -162,6 +162,8 @@ Automatiek::RakeTask.new("molinillo") do |lib|
   lib.vendor_lib = "lib/bundler/vendor/molinillo"
 end
 
+# We currently ship Thor 1.0.1 with a patch on top to remove usage of the `set`
+# gem, so that we can support `set` inside Gemfiles.
 desc "Vendor a specific version of thor"
 Automatiek::RakeTask.new("thor") do |lib|
   lib.version = "v1.0.1"
